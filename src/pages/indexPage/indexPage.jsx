@@ -9,9 +9,14 @@ const IndexPage = () => {
   let navigate = useNavigate()
 
   const handleSubmit = () => {
-    fetch(`http://127.0.0.1:5000/get-dups?html=${code.toString()}`)
+    fetch(`http://adarshsingh87.pythonanywhere.com/get-dups?html=${code.toString()}`, {
+      method: 'GET',
+    })
       .then((response) => response.json())
-      .then((data) => navigate('/results', {state: {data}} ))
+      .then((data) => navigate('/results', { state: { data } }))
+      .catch((rejected) => {
+        console.log(rejected)
+      })
   }
 
   return (

@@ -9,7 +9,7 @@ const IndexPage = () => {
   let navigate = useNavigate()
 
   const handleSubmit = () => {
-    fetch(`http://adarshsingh87.pythonanywhere.com/get-dups?html=${code.toString()}`, {
+    fetch(`https://adarshsingh87.pythonanywhere.com/get-dups?html=${code.toString()}`, {
       method: 'GET',
     })
       .then((response) => response.json())

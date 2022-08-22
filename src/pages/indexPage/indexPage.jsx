@@ -9,7 +9,8 @@ const IndexPage = () => {
   let navigate = useNavigate()
 
   const handleSubmit = () => {
-    fetch(`https://adarshsingh87.pythonanywhere.com/get-dups?html=${code.toString()}`, {
+    // replace \n with ''  for backend encoding
+    fetch(`https://adarshsingh87.pythonanywhere.com/get-dups?html=${code.replace(/\n/g, '')}`, {
       method: 'GET',
     })
       .then((response) => response.json())

@@ -1,0 +1,15 @@
+.results-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.results__card-container {
+  width: 100%;
+  display: inline-flex;
+  gap: 110px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
